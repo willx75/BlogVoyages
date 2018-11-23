@@ -1,0 +1,15 @@
+
+<div class="well">
+    {{ form_start(form, {'attr': {'class': 'form-horizontal'}}) }}
+
+    {{ form_label(form.lieu, "lieu :", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
+    {{ form_label(form.nomArticle, "Objet :", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
+    {{ form_label(form.contenu, "Contenu :", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
+
+
+
+    <button type="submit"> Creer</button>
+
+
+    {{ form_end(form) }}
+</div>

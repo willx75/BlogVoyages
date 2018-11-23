@@ -1,0 +1,79 @@
+homepage:
+    path:     /index
+    defaults: { _controller: AppBundle:Default:index }
+
+home:
+    path:     /
+    defaults: { _controller: AppBundle:Default:index }
+
+contact:
+    path:     /contact
+    defaults: { _controller: AppBundle:Default:contact }
+
+
+inscription:
+    path:      /inscription
+    defaults: { _controller: AppBundle:User:inscription }
+
+connexion:
+    path:   /connexion
+    defaults: { _controller: AppBundle:Security:connexion }
+
+check_connexion:
+    path:      /check_connexion
+    defaults: { _controller: AppBundle:Security:check_connexion }
+
+deconnexion:
+    path:      /deconnexion
+    defaults: { _controller: AppBundle:Security:deconnexion }
+
+accueil:
+    path:  /accueil
+    defaults: { _controller: AppBundle:Site:accueil }
+
+merci :
+    path : /merci
+    defaults: { _controller: AppBundle:User:merci }
+
+
+categorie:
+    path:  /categorie
+    defaults: { _controller: AppBundle:Site:categorie }
+
+profil:
+    path:  /profil
+    defaults: { _controller: AppBundle:Site:profil }
+
+
+creerPost:
+    path : /creerPost
+    defaults: { _controller: AppBundle:Site:creerPost }
+
+creerCommentaire:
+    path : /creerCommentaire
+    defaults: { _controller: AppBundle:Site:creerCommentaire }
+
+vosPost:
+    path : /vosPost
+    defaults: { _controller: AppBundle:Site:vosPost }
+
+voirCommentaire:
+    path : /voirCommentaire
+    defaults: { _controller: AppBundle:Site:voirCommentaire }
+
+boitedereception:
+    path: /boitedereception
+    defaults : {_controller: AppBundle:Message:boiteDeReception}
+
+friends:
+    path: /friends
+    defaults : {_controller: AppBundle:Message:friends}
+
+send:
+    path: /send
+    defaults : {_controller: AppBundle:Message:send}
+
+sent:
+    path: /sent
+    defaults : {_controller: AppBundle:Message:sent}
+

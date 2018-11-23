@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>How to Get Away with a Semester</title>
+        <link rel="icon" type="image/x-icon" href="{{ asset('motivation.png') }}" />
+        <link rel="stylesheet" href="{{asset('styles.css') }}" />
+    </head>
+    <body>
+
+
+<div id="boitedereception">
+<div id="titre">Vos messages reçus</div></br></br>
+
+
+<table id="tab_messages">
+	<tr>
+		<th> Expéditeur </th>
+		<th> Objet du message </th>
+		<th> Message </th>
+	</tr>
+	{%for m in messages%}
+	<tr>
+		<td> {{m.emetteur.name}} </td>
+		<td> {{m.objet}} </td>
+		<td> {{m.message}} </td>
+{%endfor%}
+</table>
+</br></br>
+
+</div>
+</body>
+
+</html>

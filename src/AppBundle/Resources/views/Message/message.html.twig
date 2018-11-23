@@ -1,0 +1,35 @@
+
+<div class="container" id="register">
+<div class="titre" id="titre">ENVOYER UN MESSAGE</div>
+</br></br>
+
+Vous envoyez un message à {{receveur.prenom}} :</br></br>
+
+          <div class="panel-body">
+            {{ form_start(form) }}
+           
+           <div class="form_group">
+                <div class="col-md-8 col-md-offset-2">
+                {{ form_row(form.objet, {'attr': {'class': 'form-control'}}) }}
+                </div>
+            </div>
+
+</br>
+            <div class="form_group">
+                <div class="col-md-8 col-md-offset-2">
+                {{ form_row(form.message, {'attr': {'class': 'form-control'}}) }}
+                </div>
+            </div>
+
+
+
+
+            <div class="form-group">
+                <div class="col-md-8 col-md-offset-4" style="margin-top:5px;"></br>
+                    <button type="submit" id="register_btn">
+                      ENVOYER
+                    </button>
+                </div>
+            </div>
+    {{ form_end(form) }}
+</body>

@@ -1,0 +1,16 @@
+
+
+<div id="corps">
+<div id="titre">Vos amis :</div></br></br>
+
+
+<div id="choix">
+{% for p in user %}
+<a href="{{path('send', {'id': p.id})}}"><button id="user">Personne : {{p.prenom}}</button></a>
+{% endfor %}
+</div></br></br>
+
+</div>
+</body>
+
+</html>

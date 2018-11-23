@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>{% block title %} Welcome! {% endblock %}</title>
+
+    <!-- Fonts -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css" integrity="sha384-XdYbMnZ/QjLh6iI4ogqCTaIjrFk87ip+ekIjefZch0Y+PvJ8CDYtEs1ipDmPorQ+" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+</head>
+
+
+{% block body %}
+<hearder><ul>
+        <li><a href="accueil">Accueil</a></li>
+
+        <li><a href="profil">Profil</a></li>
+        <li><a href="deconnexion">Deconnexion</a></li>
+    </ul></header>
+    <h1>Accueil</h1>
+
+    {% for a in articles %}
+    {{ a.lieu }}
+    {{ a.nomArticle }}
+    {{ a.contenu }}
+    {{ user.id }}
+
+
+        <a href="{{path('creerCommentaire', {'id': a.id})}}"><button id="user">Poster un commentaire</button></a><br><br>
+        <a href="{{path('voirCommentaire', {'id': a.id})}}"><button id="user">Voir les commentaire</button></a><br><br>
+    {% endfor %}
+    {{ dump(articles) }}
+
+    <button id="profil"><a href="{{ path('profil')}}">Profil</a></button>
+    <button id="send"><a href="{{ path('friends')}}">Send a message</a></button>
+    <button id="sent"><a href="{{ path('boitedereception')}}">Boite de reception</a></button>
+
+</hearder>
+
+{% endblock %}
